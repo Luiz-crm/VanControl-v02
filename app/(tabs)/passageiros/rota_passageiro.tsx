@@ -1,19 +1,19 @@
 import { db } from "@/firebaseConfig";
 import { useNavigation } from "@react-navigation/native";
 import {
-    Accuracy,
-    LocationObject,
-    requestForegroundPermissionsAsync,
-    watchPositionAsync,
+  Accuracy,
+  LocationObject,
+  requestForegroundPermissionsAsync,
+  watchPositionAsync,
 } from "expo-location";
 import { onValue, ref } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
 import {
-    Alert,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Alert,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 
@@ -115,7 +115,7 @@ export default function SelecionarRotaScreen() {
       Alert.alert("A rota selecionada não está cadastrada.");
       return;
     }
-    navigation.navigate("TelaAssentos", { rotaSelecionada: rota });
+    navigation.navigate("AssentosScreen", { rotaSelecionada: rota });
   }
 
   if (permissionDenied) {

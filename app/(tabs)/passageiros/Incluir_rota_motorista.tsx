@@ -1,19 +1,19 @@
 import { db } from "@/firebaseConfig";
 import {
-    Accuracy,
-    LocationObject,
-    requestForegroundPermissionsAsync,
-    watchPositionAsync,
+  Accuracy,
+  LocationObject,
+  requestForegroundPermissionsAsync,
+  watchPositionAsync,
 } from "expo-location";
 import { onValue, push, ref, remove } from "firebase/database";
 import { useEffect, useRef, useState } from "react";
 import {
-    Alert,
-    FlatList,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Alert,
+  FlatList,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 
